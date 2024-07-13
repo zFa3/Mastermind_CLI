@@ -8,3 +8,5 @@ right place (green), the correct number in the
 wrong place (yellow), or the incorrect number (red)
 
 you have 10 attemps(you can also change this)
+
+![image](https://github.com/user-attachments/assets/cbfa0a52-2f2d-4a91-bb8d-1a6af2c1e28d)
