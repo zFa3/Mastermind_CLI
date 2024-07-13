@@ -69,17 +69,21 @@ def inputValidation(playerInput: str):
 for i in range(attempts):
     answer = []
     for j in range(passwordLength):
-        try:
-            arg = input().split()
-            if all([inputValidation(item) for item in arg]) and len(arg) == 5:
-                answer = list(map(int, arg)); break
-        except: pass
-        print("Invalid input")
-    board.pop(0)
-    board.append(answer)
-    print_board(board[::-1])
-    if answer == password:
-        print("YOU WON!")
-        sys.exit()
+        a = True
+        while a:
+            try:
+                arg = input().split()
+                if all([inputValidation(item) for item in arg]) and len(arg) == 5:
+                    answer = list(map(int, arg)); a = False
+                else:
+                    print("Invalid input")
+            except:
+                print("Invalid input")
+        board.pop(0)
+        board.append(answer)
+        print_board(board[::-1])
+        if answer == password:
+            print("YOU WON!")
+            sys.exit()
 
 print("GAME OVER!")
