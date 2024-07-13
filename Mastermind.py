@@ -32,8 +32,8 @@ class Colors:
 
 printer = Colors()
 
-attempts = 10
-passwordLength = 5
+attempts = 20
+passwordLength = 20
 password = [rd.randint(1, 9) for _ in range(passwordLength)]
 # the password uses digits 1 through 9
 board = [
@@ -73,7 +73,7 @@ for i in range(attempts):
         while a:
             try:
                 arg = input().split()
-                if all([inputValidation(item) for item in arg]) and len(arg) == 5:
+                if all([inputValidation(item) for item in arg]) and len(arg) == passwordLength:
                     answer = list(map(int, arg)); a = False
                 else:
                     print("Invalid input")
